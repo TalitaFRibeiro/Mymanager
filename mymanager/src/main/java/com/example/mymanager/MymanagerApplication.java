@@ -1,13 +1,15 @@
 package com.example.mymanager;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.example.mymanager.product.Product;
 
 @SpringBootApplication
 public class MymanagerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MymanagerApplication.class, args);
+		
 	}
 	
 	/* @Bean
