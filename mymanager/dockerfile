@@ -1,0 +1,10 @@
+FROM openjdk:17-jdk
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
+
+RUN docker-compose down
+# Para o docker-compose e remove os containers antigos
+RUN docker-compose up --build --force-recreate
+# Sobe o docker-compose recriando os containers
+

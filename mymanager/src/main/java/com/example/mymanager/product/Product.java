@@ -2,7 +2,13 @@ package com.example.mymanager.product;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+
+@Entity
 public class Product {
+    @Id
     private Long id_produto;
     private String product_name;
     private LocalDate product_check_in;

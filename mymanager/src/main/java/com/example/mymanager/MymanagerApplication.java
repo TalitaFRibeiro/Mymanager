@@ -10,5 +10,18 @@ public class MymanagerApplication {
 		SpringApplication.run(MymanagerApplication.class, args);
 	}
 	
+	/* @Bean
+	CommandLineRunner commandLineRunner(ProductRepository repository){
+		return args -> {
+			if(repository.count() ==0){
+				var product =  new Product(
+					2L,
+			"Computer",
+			LocalDate.of(2024,Month.OCTOBER,13), 
+			LocalDate.of(2024,Month.OCTOBER,15));
+			repository.save(product);
+			}
+		}
+	} */
 }
 
