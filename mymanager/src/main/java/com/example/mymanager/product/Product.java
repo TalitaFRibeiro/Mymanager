@@ -11,7 +11,7 @@ import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
 
-@Entity 
+@Entity(name = "Product") 
 @Table
 public class Product {
     @Id
@@ -24,7 +24,7 @@ public class Product {
         strategy = GenerationType.SEQUENCE,
         generator = "product_sequence"
     )
-    private Long id_produto;
+    private Long id_product;
     private String product_name;
     private LocalDate product_check_in;
     private LocalDate product_check_out;
@@ -33,7 +33,7 @@ public class Product {
     }
     
     public Product(Long id_produto, String product_name, LocalDate product_check_in, LocalDate product_check_out) {
-        this.id_produto = id_produto;
+        this.id_product = id_produto;
         this.product_name = product_name;
         this.product_check_in = product_check_in;
         this.product_check_out = product_check_out;
@@ -46,11 +46,11 @@ public class Product {
     }
 
     public Long getId_produto() {
-        return id_produto;
+        return id_product;
     }
 
     public void setId_produto(Long id_produto) {
-        this.id_produto = id_produto;
+        this.id_product = id_produto;
     }
 
     public String getProduct_name() {
@@ -79,7 +79,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product [id_produto=" + id_produto + ", product_name=" + product_name + ", product_check_in="
+        return "Product [id_produto=" + id_product + ", product_name=" + product_name + ", product_check_in="
                 + product_check_in + ", product_check_out=" + product_check_out + "]";
     }
 

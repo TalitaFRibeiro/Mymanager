@@ -2,8 +2,6 @@ package com.example.mymanager;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.mymanager.product.Product;
-
 @SpringBootApplication
 public class MymanagerApplication {
 
@@ -12,6 +10,7 @@ public class MymanagerApplication {
 		
 	}
 	
+
 	/* @Bean
 	CommandLineRunner commandLineRunner(ProductRepository repository){
 		return args -> {
